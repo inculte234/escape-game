@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Commande de Vin</title>
+  <style>
+    body {
+      font-family: "Courier New", Courier, monospace;
+      text-align: center;
+      margin-top: 100px;
+    }
+    input {
+      padding: 10px;
+      width: 200px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      font-size: 16px;
+    }
+    #resultat {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Combien de bouteilles voulez vous commander ?</h1>
+  <input type="text" id="saisie" placeholder="Saisir un chiffre ici">
+  <button onclick="jouer()">OK</button>
+  <div id="resultat"></div>
+
+  <script>
+    function jouer() {
+      let texte = document.getElementById("saisie").value.toLowerCase();
+      let resultat = "";
+
+      if (texte === "1997") {
+        resultat = "Merci pour votre commande, le livreur arrive d'une minute à l'autre";
+      } else {
+        resultat = "Nous ne pouvons pas livrer ce nombre de bouteilles, veuiller rééssayer";
+      }
+
+      document.getElementById("resultat").innerText = resultat;
+    }
+  </script>
+</body>
+</html>
